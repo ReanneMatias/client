@@ -1,0 +1,131 @@
+/* Main Container */
+.main-container {
+  padding: 2rem;
+  background: radial-gradient(circle, #0f2027, #203a43, #2c5364); /* Cinematic gradient */
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #e9f6fab7; /* Warm highlight color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Featured Movie Section */
+.featured-list-container {
+  width: 100%;
+  height: 400px; /* Larger for more focus */
+  margin-bottom: 3rem;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Movie-like shadow */
+  background: #111; /* Fallback color */
+}
+
+.featured-backdrop {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  animation: fadeIn 2s ease-in-out; /* Smooth animation */
+}
+
+.featured-movie-title {
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); /* Gradient fade */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Movie List Container */
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Movie Cards */
+.movie-card {
+  width: 150px; /* Slightly bigger cards */
+  height: 225px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #222; /* Placeholder background */
+}
+
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(85%);
+  transition: filter 0.3s ease;
+}
+
+.movie-card:hover img {
+  filter: brightness(100%);
+}
+
+.movie-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.movie-card:hover::after {
+  opacity: 1;
+}
+
+.movie-card:hover {
+  transform: scale(1.1); /* Zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Movie Card Title */
+.movie-card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
